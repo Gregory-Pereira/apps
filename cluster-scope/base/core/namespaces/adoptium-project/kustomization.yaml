@@ -4,6 +4,8 @@ kind: Kustomization
 
 components:
 - ../../../../components/project-admin-rolebindings/adoptium
+- ../../../../components/resourcequotas/large
+- ../../../../components/limitranges/default
 
 namespace: adoptium-project
 
