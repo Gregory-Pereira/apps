@@ -9,4 +9,3 @@ namespace: adoptium-project
 
 resources:
 - namespace.yaml
-

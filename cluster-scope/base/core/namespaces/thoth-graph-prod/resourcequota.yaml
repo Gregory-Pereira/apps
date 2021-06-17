@@ -4,8 +4,8 @@ metadata:
   name: thoth-graph-prod-custom
 spec:
   hard:
-    limits.cpu: '12'
-    limits.memory: 16Gi
+    limits.cpu: '14'
+    limits.memory: 20Gi
     requests.cpu: '12'
     requests.memory: 16Gi
     requests.storage: 120Gi
