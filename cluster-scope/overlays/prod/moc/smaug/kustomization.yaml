@@ -14,6 +14,8 @@ resources:
   - ../../../../base/core/namespaces/ds-ml-workflows-ws
   - ../../../../base/core/namespaces/opf-google-spark-operator
   - ../../../../base/core/namespaces/opf-kafka
+  - ../../../../base/core/namespaces/opf-jupyterhub
+  - ../../../../base/core/namespaces/opf-jupyterhub-stage
   - ../../../../base/core/namespaces/openshift-nmstate
   - ../../../../base/core/namespaces/openshift-pipelines
   - ../../../../base/core/namespaces/opf-ci-pipelines
