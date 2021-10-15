@@ -1,0 +1,55 @@
+apiVersion: integreatly.org/v1alpha1
+kind: GrafanaDataSource
+metadata:
+    name: balrog-prometheus-gds
+    annotations:
+        kustomize.config.k8s.io/behavior: replace
+spec:
+    datasources:
+        - editable: false
+          name: balrog-prometheus-gds
+          uid: balrog-prom-GDS
+          jsonData:
+            httpHeaderName1: Authorization
+            timeInterval: 5s
+            tlsSkipVerify: true
+            derivedFields:
+                - datasourceUid: balrog-prom-GDS
+                  matcherRegex: /^[A-Za-z]+$/
+                  url: https://github.com/operate-first/apps/blob/master/grafana/overlays/moc/smaug/grafanadatasource.enc.yaml
+          secureJsonData:
+            httpHeaderValue1: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkSHpCRzR6cTJ5Zm9zU1l1Y3NucF9oY2ZiY1FKU1JkV19xaVJkekNTU2cifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJvcGVuc2hpZnQtdXNlci13b3JrbG9hZC1tb25pdG9yaW5nIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6InByb21ldGhldXMtdXNlci13b3JrbG9hZC10b2tlbi1uOGdscyIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50Lm5hbWUiOiJwcm9tZXRoZXVzLXVzZXItd29ya2xvYWQiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiJmNGYyNjgyZC1mNDhkLTQxNmYtYjRlMS01NDJjMjY0NzkzYTciLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6b3BlbnNoaWZ0LXVzZXItd29ya2xvYWQtbW9uaXRvcmluZzpwcm9tZXRoZXVzLXVzZXItd29ya2xvYWQifQ.NJS0oNh3RHtXHXUohcg4d1FmO-XxptyVJmbLwAAtG4OEpm2X45VmsLGIYfnQ5FjJuoPXVTi2zMhwcMW4ono2xpGEwNDkhD21Rzz7R9zi34-RqLSgPHnfH-DG5Ik6gXF5d8JD1zeiZ0bbxfhF9oZrOBdB2aqY9G_q9YDzrCvYVx9U37YyW_WDoBcqZ_L6rRhvozAsPoNSN-25ao1ktkcI7tQEinmKvtkQzUxsSuBH8Risru69aucPGuJQQ4hNZWOwroUYthEAvztxB9duiBpeNgxQ-i5kSSMpX78lCkf7Prt1PCCN7Z2sZ2cdqeCAO7oPMG2Auys7oe4a8K5dei8H74FpPv0yuaPbu9no2bRAhgeagOpLRFtuwzQ0DJeaq65pkIGnXnBpdo48fQFVgBOP_5BZKcld3FIjQcHZVcFWIPqJtJph6xIWCcvLzyBecViLNNSjVxwqHC4_RBFqvdA9cvKyW2aOeCyXylRoa3PR3Ntl7Q3v3AFJRwNY9EGu69XEn390uDdyD56dFdkpNb7M0t9-YhfS35Dg1jckZZCXu41gtRtmC11ZgkwNDcQUGexT7DMb4Ew6JXCnPvW91bzO_-LwWZwMIOTuT-QAoOIm1L_Akdug3j3gRMBswZn98r_ytEaUQypnmCFRGLb17pnOUcpAHN5YPHK7-a9OKgQeBVM
+          type: prometheus
+          url: https://thanos-querier.openshift-monitoring.svc.cluster.local:9091
+    name: balrog-prometheus-gds
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2021-10-15T16:47:17Z"
+    mac: ENC[AES256_GCM,data:kRBK54LhXV4U9zeH8q0mG7QdaoihQ/duTJvYlVVxIJ3/36nNkJB1NByxy9C+O6pOuTVfu8Q7xv4tNcH8kw4Ivruw3OXE/HdPrLv7iOCywBGY5wtivuSaN+JqGaMYNAoeQmd7crgjOlvmpC+Ts3rp8ebQ3CZFVNl7DvGcli1XVJ8=,iv:H0ySeemM8TdBpTwJt+FY0eO/oFUPBscEt1bow6oO0mA=,tag:+JNDnsdIIgg27CneYTR3xQ==,type:str]
+    pgp:
+        - created_at: "2021-10-15T16:47:15Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            wcFMA9aKBcudqifiARAArIEJpNMq+C67tvPH2yr07COq7OF87G73GqaWYYIaS3Wj
+            7gjil80P90I9UpKHFkikCvmPDE3KMLIwmsOPrladzLkOnx3um6GGY7+LojpMkiPk
+            BuhaN5r3fGsfkbve3/r2IWdZzWYoM1uI7+VYxYI4eRcKzv9irdI6YUYscA5bMqRW
+            ONN9kilHiRQCsWHW4fopmKgdEJg5gZklACid+nekryy+4dKPs06YF/PMInRKyRpf
+            Y7rRzYBh/F6xqBqiqk38SdU8ABCYs8UPIEAKFRgPb/ncCnualUdetm23sL8ziBbD
+            5k1uUO7HBHAJ8dSMWBc2CEwA7SQOfFhdGTkUCAQuNTQ4owiaKlZFSIUIaZIQ1+PR
+            53TMY9I6Ej0pQ7HYs1bl9uxUI3g3fmyaq51H4ARYSIahuLlKk8rT7ou6iI+p+L7R
+            OMPoxYIT+zt7jAubiW46mimjljlETGHEgbkSvu/jSvUIIMgQd1lwIop6fgHsZ7zz
+            +NG1tUpP4bNGDhRfKQCWf4JTwOGlnd2iKci8B2Xfkl0auaV2uvAfbtDAgV9nKwoy
+            KStWl3MOOLmYkwPAPTXSwTeGfZ6lTzMuHdTd9pGVIrbvUcy/+M7UtXFmrCZ42QYB
+            cIBEzduAXzNO2ev+HAwc7B8+GPPyqz1a/aBml5GxpwhWV9VTpK0Av2SjYAzk8fHS
+            5gFG6z2QjxKxN/6cYopelBlhxphtUEUiyj1ZOs0K7Z+6S/PjEjKrK4Pxdq9UGX7l
+            r0ySW7oRcsPK3TCsZ81kGKPkFrDR1aRQiO/3SUYpPpEeK+Ln6CnUAA==
+            =ZyOY
+            -----END PGP MESSAGE-----
+          fp: 0508677DD04952D06A943D5B4DC4116D360E3276
+    encrypted_regex: ^(users|data|stringData)$
+    version: 3.7.1
