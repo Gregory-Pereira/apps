@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: persistantVolume
+kind: PersistentVolume
 metadata:
   name: triage-party-pv
 spec:
