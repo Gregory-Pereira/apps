@@ -7,7 +7,7 @@ spec:
   template:
     spec:
       volumes:
-        - name: pcache
+        - name: triage-party-pv
           emptyDir: null
           persistentVolumeClaim:
             claimName: triage-party-pcache

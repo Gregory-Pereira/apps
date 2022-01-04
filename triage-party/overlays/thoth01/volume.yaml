@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: persistantVolume
+metadata:
+  name: triage-party-pv
+spec:
+  capacity:
+    storage: 10Gi
+  nfs:
+    server: 172.17.0.2
+    path: /app
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  volumeMode: Filesystem
