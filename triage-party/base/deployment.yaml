@@ -36,4 +36,4 @@ spec:
             name: triage-party-config
         - name: pcache
           persistentVolumeClaim:
-            name: triage-party-pcache
+            claimName: triage-party-pcache
