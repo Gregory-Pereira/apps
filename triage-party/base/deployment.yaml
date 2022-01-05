@@ -35,4 +35,5 @@ spec:
           configMap:
             name: triage-party-config
         - name: pcache
-          emptyDir: {}
+          persistentVolumeClaim:
+            name: triage-party-pcache

@@ -1,13 +1,14 @@
+---
 apiVersion: apps/v1
 kind: PersistentVolume
 metadata:
-  name: triage-party-pv
+  name: pcache
 spec:
   capacity:
-    storage: 10Gi
+    storage: 5Gi
   nfs:
     server: 172.17.0.2
-    path: /app
+    path: /app/pcache
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
