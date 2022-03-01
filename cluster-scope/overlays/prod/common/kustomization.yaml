@@ -52,6 +52,7 @@ resources:
 - ../../../base/user.openshift.io/groups/sre
 - ../../../base/user.openshift.io/groups/superset-user
 - ../../../base/user.openshift.io/groups/team-pixel
+- ../../../base/user.openshift.io/groups/testgroup
 - ../../../base/user.openshift.io/groups/thoth
 - ../../../base/user.openshift.io/groups/thoth-devops
 - ../../../base/user.openshift.io/groups/tremor-demo
