@@ -24,8 +24,8 @@ resources:
 - ../../../../base/core/namespaces/aicoe-meteor
 - ../../../../base/core/namespaces/apicurio-apicurio-registry
 - ../../../../base/core/namespaces/b4mad-racing
-- ../../../../base/core/namespaces/cosigned
 - ../../../../base/core/namespaces/boatrockers
+- ../../../../base/core/namespaces/cosigned
 - ../../../../base/core/namespaces/debezium-ui
 - ../../../../base/core/namespaces/democratic-csi
 - ../../../../base/core/namespaces/dex
@@ -64,6 +64,7 @@ resources:
 - ../../../../base/core/namespaces/rapidast
 - ../../../../base/core/namespaces/report-system
 - ../../../../base/core/namespaces/tekton-pipelines
+- ../../../../base/core/namespaces/testproject
 - ../../../../base/core/namespaces/thoth-amun-api-prod
 - ../../../../base/core/namespaces/thoth-amun-inspection-prod
 - ../../../../base/core/namespaces/thoth-backend-prod
@@ -96,9 +97,9 @@ resources:
 - ../../../../base/operators.coreos.com/subscriptions/opf-grafana
 - ../../../../base/operators.coreos.com/subscriptions/ovms-operator
 - ../../../../base/operators.coreos.com/subscriptions/pulp-operator
+- ../../../../base/operators.coreos.com/subscriptions/snapscheduler
 - ../../../../base/operators.coreos.com/subscriptions/strimzi
 - ../../../../base/operators.coreos.com/subscriptions/vertical-pod-autoscaler
-- ../../../../base/operators.coreos.com/subscriptions/snapscheduler
 - ../../../../base/rbac.authorization.k8s.io/clusterrolebindings/cluster-interceptor-opf-ci-pipelines
 - ../../../../base/rbac.authorization.k8s.io/clusterrolebindings/cluster-monitoring-view
 - ../../../../base/rbac.authorization.k8s.io/clusterrolebindings/jupyterhub-cluster
