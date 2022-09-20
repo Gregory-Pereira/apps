@@ -11,6 +11,7 @@ resources:
   - openshift-monitoring
   - openshift-storage
   - opf-alertreceiver
+  - opf-ci-prow
   - opf-jupyterhub
   - opf-monitoring
   - opf-observatorium
